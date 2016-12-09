@@ -1,0 +1,1579 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1F676F36-CDB7-45CA-B686-8BA3EDBFE8A4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>iGYM_MS</RootNamespace>
+    <AssemblyName>Gymiology</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\eslam\Desktop\final\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <TargetCulture>en</TargetCulture>
+    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon2 %281%29.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>B9CF93CA62F409184F41D828A75C13DB197461B1</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>iGYM MS_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="DevExpress.BonusSkins.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Dashboard.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dashboard.v15.2.Win, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v15.2.UI, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Map.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v15.2.Drawing, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v15.2.UI, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v15.2.UI, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v15.2.Wizard, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v15.2.Presets, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v15.2.Win, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraMap.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v15.2.Extensions, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v15.2.Extensions, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BL\clsAdd.cs" />
+    <Compile Include="BL\clsCalc.cs" />
+    <Compile Include="BL\clsFill.cs" />
+    <Compile Include="BL\clsGet.cs" />
+    <Compile Include="BL\clsUpdate.cs" />
+    <Compile Include="EDM\CashIn.cs">
+      <DependentUpon>GymModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDM\Category.cs">
+      <DependentUpon>GymModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDM\Duration.cs">
+      <DependentUpon>GymModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDM\Employee.cs">
+      <DependentUpon>GymModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDM\EmployeesDaily.cs">
+      <DependentUpon>GymModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDM\GymData.cs">
+      <DependentUpon>GymModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDM\GymModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GymModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDM\GymModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GymModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDM\GymModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GymModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="EDM\InbodyReport.cs">
+      <DependentUpon>GymModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDM\Interest.cs">
+      <DependentUpon>GymModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDM\Invitation.cs">
+      <DependentUpon>GymModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDM\Job.cs">
+      <DependentUpon>GymModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDM\Login.cs">
+      <DependentUpon>GymModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDM\Offer.cs">
+      <DependentUpon>GymModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDM\Order.cs">
+      <DependentUpon>GymModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDM\OrderDetail.cs">
+      <DependentUpon>GymModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDM\Outcome.cs">
+      <DependentUpon>GymModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDM\Product.cs">
+      <DependentUpon>GymModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDM\Session.cs">
+      <DependentUpon>GymModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDM\SocialMedia.cs">
+      <DependentUpon>GymModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDM\Traffic.cs">
+      <DependentUpon>GymModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDM\Trainee.cs">
+      <DependentUpon>GymModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDM\TraineeProfile.cs">
+      <DependentUpon>GymModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDM\TraineesDaily.cs">
+      <DependentUpon>GymModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDM\User.cs">
+      <DependentUpon>GymModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDM\UsersAccess.cs">
+      <DependentUpon>GymModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GymDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GymDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GymDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GymDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NumberToText.cs" />
+    <Compile Include="PL\rptCashOut.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PL\rptCashOut.Designer.cs">
+      <DependentUpon>rptCashOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmActivate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmActivate.designer.cs">
+      <DependentUpon>frmActivate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmAddCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmAddCategory.Designer.cs">
+      <DependentUpon>frmAddCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmAddForTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmAddForTransfer.Designer.cs">
+      <DependentUpon>frmAddForTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmAddInvitation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmAddInvitation.Designer.cs">
+      <DependentUpon>frmAddInvitation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmAddJob.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmAddJob.Designer.cs">
+      <DependentUpon>frmAddJob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmAddOffer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmAddOffer.Designer.cs">
+      <DependentUpon>frmAddOffer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmAddOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmAddOrder.Designer.cs">
+      <DependentUpon>frmAddOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmAddOutcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmAddOutcome.Designer.cs">
+      <DependentUpon>frmAddOutcome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmAddProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmAddProduct.Designer.cs">
+      <DependentUpon>frmAddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmAddSession.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmAddSession.Designer.cs">
+      <DependentUpon>frmAddSession.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmAddSessionType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmAddSessionType.Designer.cs">
+      <DependentUpon>frmAddSessionType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmAddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmAddUser.Designer.cs">
+      <DependentUpon>frmAddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmAddVisit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmAddVisit.Designer.cs">
+      <DependentUpon>frmAddVisit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmCancellation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmCancellation.Designer.cs">
+      <DependentUpon>frmCancellation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmChangeID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmChangeID.Designer.cs">
+      <DependentUpon>frmChangeID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmChangePassword.Designer.cs">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmChooseSesttings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmChooseSesttings.Designer.cs">
+      <DependentUpon>frmChooseSesttings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmDaily.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmDaily.designer.cs">
+      <DependentUpon>frmDaily.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmDailyEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmDailyEmployees.Designer.cs">
+      <DependentUpon>frmDailyEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmDailyReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmDailyReport.Designer.cs">
+      <DependentUpon>frmDailyReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmDayCLosing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmDayCLosing.Designer.cs">
+      <DependentUpon>frmDayCLosing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmDebits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmDebits.Designer.cs">
+      <DependentUpon>frmDebits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmDevices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmDevices.Designer.cs">
+      <DependentUpon>frmDevices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmEditOffer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmEditOffer.Designer.cs">
+      <DependentUpon>frmEditOffer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmEmployeeLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmEmployeeLog.Designer.cs">
+      <DependentUpon>frmEmployeeLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmFreezing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmFreezing.Designer.cs">
+      <DependentUpon>frmFreezing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmGymData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmGymData.Designer.cs">
+      <DependentUpon>frmGymData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmInbodyReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmInbodyReport.Designer.cs">
+      <DependentUpon>frmInbodyReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmPaidCarry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmPaidCarry.Designer.cs">
+      <DependentUpon>frmPaidCarry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmRenew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmRenew.Designer.cs">
+      <DependentUpon>frmRenew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmReport.Designer.cs">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmSales.Designer.cs">
+      <DependentUpon>frmSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmShowCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmShowCategory.Designer.cs">
+      <DependentUpon>frmShowCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmShowEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmShowEmployees.Designer.cs">
+      <DependentUpon>frmShowEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmShowEmpolyee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmShowEmpolyee.Designer.cs">
+      <DependentUpon>frmShowEmpolyee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmShowInvitations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmShowInvitations.Designer.cs">
+      <DependentUpon>frmShowInvitations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmShowOffers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmShowOffers.Designer.cs">
+      <DependentUpon>frmShowOffers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmShowTrainee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmShowTrainee.Designer.cs">
+      <DependentUpon>frmShowTrainee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmShowTrainees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmShowTrainees.Designer.cs">
+      <DependentUpon>frmShowTrainees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmShowUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmShowUser.Designer.cs">
+      <DependentUpon>frmShowUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmTraffic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmTraffic.Designer.cs">
+      <DependentUpon>frmTraffic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FrmTraineeLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FrmTraineeLog.Designer.cs">
+      <DependentUpon>FrmTraineeLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmAddEmplyee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmAddEmplyee.Designer.cs">
+      <DependentUpon>frmAddEmplyee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmAddTrainee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmAddTrainee.Designer.cs">
+      <DependentUpon>frmAddTrainee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmUserPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmUserPassword.Designer.cs">
+      <DependentUpon>frmUserPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\rptCashIn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PL\rptCashIn.Designer.cs">
+      <DependentUpon>rptCashIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmSystemLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmSystemLog.Designer.cs">
+      <DependentUpon>frmSystemLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs" />
+    <EmbeddedResource Include="PL\rptCashOut.resx">
+      <DependentUpon>rptCashOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmActivate.resx">
+      <DependentUpon>frmActivate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmAddCategory.resx">
+      <DependentUpon>frmAddCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmAddForTransfer.resx">
+      <DependentUpon>frmAddForTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmAddInvitation.resx">
+      <DependentUpon>frmAddInvitation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmAddJob.resx">
+      <DependentUpon>frmAddJob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmAddOffer.resx">
+      <DependentUpon>frmAddOffer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmAddOrder.resx">
+      <DependentUpon>frmAddOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmAddOutcome.resx">
+      <DependentUpon>frmAddOutcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmAddProduct.resx">
+      <DependentUpon>frmAddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmAddSession.resx">
+      <DependentUpon>frmAddSession.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmAddSessionType.resx">
+      <DependentUpon>frmAddSessionType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmAddUser.resx">
+      <DependentUpon>frmAddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmAddVisit.resx">
+      <DependentUpon>frmAddVisit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmCancellation.resx">
+      <DependentUpon>frmCancellation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmChangeID.resx">
+      <DependentUpon>frmChangeID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmChangePassword.resx">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmChooseSesttings.resx">
+      <DependentUpon>frmChooseSesttings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmDaily.resx">
+      <DependentUpon>frmDaily.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmDailyEmployees.resx">
+      <DependentUpon>frmDailyEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmDailyReport.resx">
+      <DependentUpon>frmDailyReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmDayCLosing.resx">
+      <DependentUpon>frmDayCLosing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmDebits.resx">
+      <DependentUpon>frmDebits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmDevices.resx">
+      <DependentUpon>frmDevices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmEditOffer.resx">
+      <DependentUpon>frmEditOffer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmEmployeeLog.resx">
+      <DependentUpon>frmEmployeeLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmFreezing.resx">
+      <DependentUpon>frmFreezing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmGymData.resx">
+      <DependentUpon>frmGymData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmInbodyReport.resx">
+      <DependentUpon>frmInbodyReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmPaidCarry.resx">
+      <DependentUpon>frmPaidCarry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmRenew.resx">
+      <DependentUpon>frmRenew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmReport.resx">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmSales.resx">
+      <DependentUpon>frmSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmShowCategory.resx">
+      <DependentUpon>frmShowCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmShowEmployees.resx">
+      <DependentUpon>frmShowEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmShowEmpolyee.resx">
+      <DependentUpon>frmShowEmpolyee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmShowInvitations.resx">
+      <DependentUpon>frmShowInvitations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmShowOffers.resx">
+      <DependentUpon>frmShowOffers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmShowTrainee.resx">
+      <DependentUpon>frmShowTrainee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmShowTrainees.resx">
+      <DependentUpon>frmShowTrainees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmShowUser.resx">
+      <DependentUpon>frmShowUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmTraffic.resx">
+      <DependentUpon>frmTraffic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FrmTraineeLog.resx">
+      <DependentUpon>FrmTraineeLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmAddEmplyee.resx">
+      <DependentUpon>frmAddEmplyee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmAddTrainee.resx">
+      <DependentUpon>frmAddTrainee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmUserPassword.resx">
+      <DependentUpon>frmUserPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\rptCashIn.resx">
+      <DependentUpon>rptCashIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmSystemLog.resx">
+      <DependentUpon>frmSystemLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EntityDeploy Include="EDM\GymModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>GymModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="EDM\GymModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GymModel.edmx</DependentUpon>
+      <LastGenOutput>GymModel.Context.cs</LastGenOutput>
+    </None>
+    <None Include="EDM\GymModel.edmx.diagram">
+      <DependentUpon>GymModel.edmx</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EDM\GymModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GymModel.edmx</DependentUpon>
+      <LastGenOutput>GymModel.cs</LastGenOutput>
+    </None>
+    <None Include="GymDataSet.xsc">
+      <DependentUpon>GymDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GymDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GymDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GymDataSet.xss">
+      <DependentUpon>GymDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GymDataSet1.xsc">
+      <DependentUpon>GymDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="GymDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GymDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GymDataSet1.xss">
+      <DependentUpon>GymDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="iGYM MS_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon %281%29.ico" />
+    <Content Include="icon.ico" />
+    <Content Include="icon2 %281%29.ico" />
+    <Content Include="icon2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="DevExpress.BonusSkins.v15.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Charts.v15.2.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.CodeParser.v15.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Dashboard.v15.2.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Dashboard.v15.2.Win">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Data.v15.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.DataAccess.v15.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.DataAccess.v15.2.UI">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Images.v15.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Map.v15.2.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Office.v15.2.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Pdf.v15.2.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Pdf.v15.2.Drawing">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.PivotGrid.v15.2.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Printing.v15.2.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.RichEdit.v15.2.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Sparkline.v15.2.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Utils.v15.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Utils.v15.2.UI">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Xpo.v15.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraBars.v15.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraCharts.v15.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraCharts.v15.2.Extensions">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraCharts.v15.2.UI">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraCharts.v15.2.Wizard">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraEditors.v15.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraGauges.v15.2.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraGauges.v15.2.Presets">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraGauges.v15.2.Win">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraGrid.v15.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraLayout.v15.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraMap.v15.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraNavBar.v15.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraPivotGrid.v15.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraPrinting.v15.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraReports.v15.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraReports.v15.2.Extensions">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraRichEdit.v15.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraRichEdit.v15.2.Extensions">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraTreeList.v15.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraVerticalGrid.v15.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.Dashboard.v15.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.Dashboard.v15.2.Win.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.Data.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.DataAccess.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.DataAccess.v15.2.UI.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.Map.v15.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.Office.v15.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.Pdf.v15.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.PivotGrid.v15.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.Printing.v15.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.RichEdit.v15.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.Sparkline.v15.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.Utils.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.Utils.v15.2.UI.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.Xpo.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraBars.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraCharts.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraCharts.v15.2.Wizard.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraEditors.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraGauges.v15.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraGauges.v15.2.Presets.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraGrid.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraLayout.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraNavBar.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraPivotGrid.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraPrinting.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraReports.v15.2.Extensions.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraReports.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraRichEdit.v15.2.Extensions.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraRichEdit.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraTreeList.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraVerticalGrid.v15.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="icon %281%29.ico">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="icon.ico">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="icon2 %281%29.ico">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="icon2.ico">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualBasic.PowerPacks.Vs">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

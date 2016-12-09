@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0d23329f783840ea9be48f778589c969" Name="Diagram1" ZoomLevel="71">
+        <EntityTypeShape EntityType="GymModel.Duration" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GymModel.Job" Width="1.5" PointX="5.25" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GymModel.SocialMedia" Width="1.5" PointX="0.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GymModel.Interest" Width="1.5" PointX="6.75" PointY="19.75" />
+        <EntityTypeShape EntityType="GymModel.Invitation" Width="1.5" PointX="9.25" PointY="21.25" />
+        <AssociationConnector Association="GymModel.FK_Interests_Invitations" />
+        <EntityTypeShape EntityType="GymModel.Session" Width="1.5" PointX="5" PointY="3.625" />
+        <AssociationConnector Association="GymModel.FK_Invitations_Sessions" />
+        <EntityTypeShape EntityType="GymModel.Category" Width="1.5" PointX="6.6867773917907742" PointY="28.265260322142979" />
+        <EntityTypeShape EntityType="GymModel.Product" Width="1.5" PointX="9.9644441800026442" PointY="8.06279084461871" />
+        <AssociationConnector Association="GymModel.FK_Products_Categories" />
+        <EntityTypeShape EntityType="GymModel.OrderDetail" Width="1.5" PointX="5.818955191326773" PointY="24.591954287417213" />
+        <AssociationConnector Association="GymModel.FK_OrderDetails_Products" />
+        <EntityTypeShape EntityType="GymModel.Outcome" Width="1.5" PointX="1.9849702576105346" PointY="19.535904833830848" />
+        <AssociationConnector Association="GymModel.FK_Outcomes_Categories" />
+        <EntityTypeShape EntityType="GymModel.Order" Width="1.5" PointX="6.2906238428739005" PointY="13.408382198497831" />
+        <AssociationConnector Association="GymModel.FK_OrderDetails_Orders" />
+        <EntityTypeShape EntityType="GymModel.User" Width="1.5" PointX="6.8032095314949794" PointY="14.36195426358001" />
+        <EntityTypeShape EntityType="GymModel.Employee" Width="1.5" PointX="9.724634046538096" PointY="9.5210736140241252" />
+        <AssociationConnector Association="GymModel.FK_Employees_Jobs" />
+        <EntityTypeShape EntityType="GymModel.Traffic" Width="1.5" PointX="8.375" PointY="11.875" />
+        <EntityTypeShape EntityType="GymModel.Offer" Width="1.5" PointX="3.6532748395825152" PointY="12.697853213501094" />
+        <AssociationConnector Association="GymModel.FK_Offers_Durations" />
+        <EntityTypeShape EntityType="GymModel.EmployeesDaily" Width="1.5" PointX="12.375" PointY="13.75" />
+        <EntityTypeShape EntityType="GymModel.UsersAccess" Width="1.5" PointX="9.375" PointY="3.875" />
+        <AssociationConnector Association="GymModel.FK_EmployeesDaily_Employees" />
+        <AssociationConnector Association="GymModel.FK_UsersAccess_Users" />
+        <EntityTypeShape EntityType="GymModel.Login" Width="1.5" PointX="3.375" PointY="0.75" />
+        <EntityTypeShape EntityType="GymModel.InbodyReport" Width="1.5" PointX="20.125" PointY="4.125" />
+        <EntityTypeShape EntityType="GymModel.TraineesDaily" Width="1.5" PointX="14.125" PointY="22.125" />
+        <EntityTypeShape EntityType="GymModel.Trainee" Width="1.5" PointX="9.625" PointY="32.5" />
+        <AssociationConnector Association="GymModel.FK_Trainees_SocialMedia" />
+        <AssociationConnector Association="GymModel.FK_TraineesDaily_Trainees" />
+        <EntityTypeShape EntityType="GymModel.TraineeProfile" Width="1.5" PointX="11.875" PointY="22" />
+        <AssociationConnector Association="GymModel.FK_InbodyReports_TraineeProfile" />
+        <AssociationConnector Association="GymModel.FK_TraineeProfile_Offers" />
+        <AssociationConnector Association="GymModel.FK_TraineeProfile_Trainees" />
+        <AssociationConnector Association="GymModel.FK_TraineesDaily_TraineeProfile" />
+        <EntityTypeShape EntityType="GymModel.CashIn" Width="1.5" PointX="8.875" PointY="27.75" />
+        <AssociationConnector Association="GymModel.FK_CashIn_Categories" />
+        <EntityTypeShape EntityType="GymModel.GymData" Width="1.5" PointX="7.375" PointY="0.75" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,1784 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="GymModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CashIn">
+          <Key>
+            <PropertyRef Name="CashID" />
+          </Key>
+          <Property Name="Date" Type="datetime" Nullable="false" />
+          <Property Name="CategoryID" Type="int" />
+          <Property Name="RecieptID" Type="nvarchar" MaxLength="50" />
+          <Property Name="Price" Type="nvarchar" MaxLength="50" />
+          <Property Name="Desc" Type="nvarchar" MaxLength="500" />
+          <Property Name="TraineeName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Type" Type="nvarchar" MaxLength="50" />
+          <Property Name="userName" Type="nvarchar" MaxLength="50" />
+          <Property Name="OfferName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CashID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Categories">
+          <Key>
+            <PropertyRef Name="CategoryID" />
+          </Key>
+          <Property Name="CategoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CategoryName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Type" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Durations">
+          <Key>
+            <PropertyRef Name="DurationID" />
+          </Key>
+          <Property Name="DurationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DurationName" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Employees">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+          </Key>
+          <Property Name="EmployeeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EmployeeName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Birthdate" Type="date" />
+          <Property Name="Gender" Type="nvarchar" MaxLength="50" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="Nationality" Type="nvarchar" MaxLength="50" />
+          <Property Name="Degree" Type="nvarchar" MaxLength="50" />
+          <Property Name="NationalID" Type="nvarchar" MaxLength="50" />
+          <Property Name="Photo" Type="image" />
+          <Property Name="Notes" Type="nvarchar" MaxLength="500" />
+          <Property Name="HiringDate" Type="date" />
+          <Property Name="Telephone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address" Type="nvarchar" MaxLength="50" />
+          <Property Name="Mail" Type="nvarchar" MaxLength="50" />
+          <Property Name="JobID" Type="int" />
+          <Property Name="Experience" Type="nvarchar" MaxLength="500" />
+          <Property Name="Type" Type="nvarchar" MaxLength="50" />
+          <Property Name="Salary" Type="nvarchar" MaxLength="50" />
+          <Property Name="From" Type="nvarchar" MaxLength="50" />
+          <Property Name="To" Type="nvarchar" MaxLength="50" />
+          <Property Name="CardNumber" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="EmployeesDaily">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+            <PropertyRef Name="DateComing" />
+          </Key>
+          <Property Name="EmployeeID" Type="int" Nullable="false" />
+          <Property Name="DateComing" Type="datetime" Nullable="false" />
+          <Property Name="DateLeaving" Type="datetime" />
+          <Property Name="Hours" Type="nvarchar" MaxLength="50" />
+          <Property Name="Editable" Type="bit" />
+        </EntityType>
+        <EntityType Name="GymData">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address" Type="nvarchar" MaxLength="500" />
+          <Property Name="Phone1" Type="nvarchar" MaxLength="50" />
+          <Property Name="Phone2" Type="nvarchar" MaxLength="50" />
+          <Property Name="Mail" Type="nvarchar" MaxLength="50" />
+          <Property Name="Logo" Type="image" />
+        </EntityType>
+        <EntityType Name="InbodyReports">
+          <Key>
+            <PropertyRef Name="InodyID" />
+          </Key>
+          <Property Name="InodyID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LogID" Type="int" />
+          <Property Name="Height" Type="nvarchar" MaxLength="50" />
+          <Property Name="Weight" Type="nvarchar" MaxLength="50" />
+          <Property Name="BMI" Type="nvarchar" MaxLength="50" />
+          <Property Name="BMR" Type="nvarchar" MaxLength="50" />
+          <Property Name="Fat%" Type="nvarchar" MaxLength="50" />
+          <Property Name="FatMass" Type="nvarchar" MaxLength="50" />
+          <Property Name="FFM" Type="nvarchar" MaxLength="50" />
+          <Property Name="TBW" Type="nvarchar" MaxLength="50" />
+          <Property Name="VFHDR" Type="nvarchar" MaxLength="50" />
+          <Property Name="FAT%_" Type="nvarchar" MaxLength="50" />
+          <Property Name="FatMass_" Type="nvarchar" MaxLength="50" />
+          <Property Name="WholeBody" Type="nvarchar" MaxLength="50" />
+          <Property Name="RightLeg" Type="nvarchar" MaxLength="50" />
+          <Property Name="LeftLeg" Type="nvarchar" MaxLength="50" />
+          <Property Name="RightArm" Type="nvarchar" MaxLength="50" />
+          <Property Name="LeftArm" Type="nvarchar" MaxLength="50" />
+          <Property Name="RightLegFat%" Type="nvarchar" MaxLength="50" />
+          <Property Name="RightLegFatMass" Type="nvarchar" MaxLength="50" />
+          <Property Name="RightLegFFM" Type="nvarchar" MaxLength="50" />
+          <Property Name="RightLegMuscle" Type="nvarchar" MaxLength="50" />
+          <Property Name="LeftLegFat%" Type="nvarchar" MaxLength="50" />
+          <Property Name="LeftLegFatMass" Type="nvarchar" MaxLength="50" />
+          <Property Name="LeftLegFFM" Type="nvarchar" MaxLength="50" />
+          <Property Name="LeftLegMuscle" Type="nvarchar" MaxLength="50" />
+          <Property Name="RightArmFat%" Type="nvarchar" MaxLength="50" />
+          <Property Name="RightArmFatMass" Type="nvarchar" MaxLength="50" />
+          <Property Name="RightArmFFM" Type="nvarchar" MaxLength="50" />
+          <Property Name="RightArmMuscle" Type="nvarchar" MaxLength="50" />
+          <Property Name="LeftArmFat%" Type="nvarchar" MaxLength="50" />
+          <Property Name="LeftArmFatMass" Type="nvarchar" MaxLength="50" />
+          <Property Name="LeftArmFFM" Type="nvarchar" MaxLength="50" />
+          <Property Name="LeftArmMuscle" Type="nvarchar" MaxLength="50" />
+          <Property Name="TrunkFat%" Type="nvarchar" MaxLength="50" />
+          <Property Name="TrunkFatMass" Type="nvarchar" MaxLength="50" />
+          <Property Name="TrunkFFM" Type="nvarchar" MaxLength="50" />
+          <Property Name="TrunkMuscle" Type="nvarchar" MaxLength="50" />
+          <Property Name="Date" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Interests">
+          <Key>
+            <PropertyRef Name="InterestID" />
+          </Key>
+          <Property Name="InterestID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Aerobics" Type="bit" />
+          <Property Name="Running" Type="bit" />
+          <Property Name="Swimming" Type="bit" />
+          <Property Name="PersonalTraining" Type="bit" />
+          <Property Name="Rohabilitation" Type="bit" />
+          <Property Name="Fitness" Type="bit" />
+          <Property Name="WeightGaining" Type="bit" />
+          <Property Name="WeightLoss" Type="bit" />
+          <Property Name="Mas" Type="bit" />
+          <Property Name="BodyBuilding" Type="bit" />
+          <Property Name="Spa" Type="bit" />
+          <Property Name="Other" Type="bit" />
+          <Property Name="InvitationID" Type="int" />
+        </EntityType>
+        <EntityType Name="Invitations">
+          <Key>
+            <PropertyRef Name="InvitationID" />
+          </Key>
+          <Property Name="InvitationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address" Type="nvarchar" MaxLength="50" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Gender" Type="nvarchar" MaxLength="50" />
+          <Property Name="Nationality" Type="nvarchar" MaxLength="50" />
+          <Property Name="EmployeeID" Type="int" />
+          <Property Name="TraineeID" Type="int" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="SessionID" Type="int" />
+          <Property Name="Price" Type="nvarchar" MaxLength="50" />
+          <Property Name="Type" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Jobs">
+          <Key>
+            <PropertyRef Name="JobID" />
+          </Key>
+          <Property Name="JobID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="JobName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Salary" Type="nvarchar" MaxLength="50" />
+          <Property Name="HourPrice" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Login">
+          <Key>
+            <PropertyRef Name="date" />
+          </Key>
+          <Property Name="date" Type="datetime" Nullable="false" />
+          <Property Name="userName" Type="nvarchar" MaxLength="50" />
+          <Property Name="action" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Offers">
+          <Key>
+            <PropertyRef Name="OfferID" />
+          </Key>
+          <Property Name="OfferID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OfferName" Type="nvarchar" MaxLength="50" />
+          <Property Name="DurationID" Type="int" Nullable="false" />
+          <Property Name="Price" Type="nvarchar" MaxLength="50" />
+          <Property Name="Type" Type="nvarchar" MaxLength="50" />
+          <Property Name="SessionsNum" Type="int" />
+          <Property Name="Freezing" Type="int" />
+          <Property Name="Invitations" Type="int" />
+          <Property Name="SPA" Type="int" />
+          <Property Name="Inbody" Type="int" />
+          <Property Name="Massage" Type="int" />
+          <Property Name="Others" Type="int" />
+          <Property Name="From" Type="nvarchar" MaxLength="50" />
+          <Property Name="To" Type="nvarchar" MaxLength="50" />
+          <Property Name="frozen" Type="bit" />
+        </EntityType>
+        <EntityType Name="OrderDetails">
+          <Key>
+            <PropertyRef Name="OrderID" />
+            <PropertyRef Name="ProductID" />
+          </Key>
+          <Property Name="OrderID" Type="int" Nullable="false" />
+          <Property Name="ProductID" Type="int" Nullable="false" />
+          <Property Name="Sell" Type="nvarchar" MaxLength="50" />
+          <Property Name="Number" Type="nvarchar" MaxLength="50" />
+          <Property Name="Price" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Orders">
+          <Key>
+            <PropertyRef Name="OrderID" />
+          </Key>
+          <Property Name="OrderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="Desc" Type="nvarchar" MaxLength="500" />
+          <Property Name="Total" Type="nvarchar" MaxLength="50" />
+          <Property Name="ReceiptID" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Outcomes">
+          <Key>
+            <PropertyRef Name="OutcomeID" />
+          </Key>
+          <Property Name="OutcomeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CategoryID" Type="int" />
+          <Property Name="Desc" Type="nvarchar" MaxLength="500" />
+          <Property Name="RecieptID" Type="nvarchar" MaxLength="50" />
+          <Property Name="Price" Type="nvarchar" MaxLength="50" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="TraineeID" Type="int" />
+          <Property Name="userName" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Products">
+          <Key>
+            <PropertyRef Name="ProductID" />
+          </Key>
+          <Property Name="CategoryID" Type="int" />
+          <Property Name="ProductID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProductName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Buy" Type="nvarchar" MaxLength="50" />
+          <Property Name="Sell" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Sessions">
+          <Key>
+            <PropertyRef Name="SessionID" />
+          </Key>
+          <Property Name="SessionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SessionName" Type="nvarchar" MaxLength="50" />
+          <Property Name="SessionPrice" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="SocialMedia">
+          <Key>
+            <PropertyRef Name="SocialID" />
+          </Key>
+          <Property Name="SocialID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="number" Type="int" />
+        </EntityType>
+        <EntityType Name="Traffic">
+          <Key>
+            <PropertyRef Name="DayDate" />
+          </Key>
+          <Property Name="DayDate" Type="date" Nullable="false" />
+          <Property Name="TotalIncome" Type="float" />
+          <Property Name="TotalOutcome" Type="float" />
+          <Property Name="Status" Type="bit" />
+        </EntityType>
+        <EntityType Name="TraineeProfile">
+          <Key>
+            <PropertyRef Name="LogID" />
+          </Key>
+          <Property Name="LogID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TraineeID" Type="int" />
+          <Property Name="OfferID" Type="int" />
+          <Property Name="From" Type="date" />
+          <Property Name="To" Type="date" />
+          <Property Name="Price" Type="float" />
+          <Property Name="Paid" Type="float" />
+          <Property Name="Carry" Type="float" />
+          <Property Name="PaymentMethod" Type="nvarchar" MaxLength="50" />
+          <Property Name="Type" Type="nvarchar" MaxLength="50" />
+          <Property Name="SessionsNum" Type="int" />
+          <Property Name="Freezing" Type="int" />
+          <Property Name="Invitations" Type="int" />
+          <Property Name="Inbody" Type="int" />
+          <Property Name="SPA" Type="int" />
+          <Property Name="Massage" Type="int" />
+          <Property Name="Others" Type="int" />
+          <Property Name="Active" Type="bit" />
+          <Property Name="Frozen" Type="bit" />
+          <Property Name="Canceled" Type="bit" />
+          <Property Name="Transfered" Type="bit" />
+          <Property Name="TrainerID" Type="int" />
+          <Property Name="EmployeeID" Type="int" />
+        </EntityType>
+        <EntityType Name="Trainees">
+          <Key>
+            <PropertyRef Name="TraineeID" />
+          </Key>
+          <Property Name="TraineeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TraineeName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Birtdate" Type="date" />
+          <Property Name="Gender" Type="nvarchar" MaxLength="50" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="Nationality" Type="nvarchar" MaxLength="50" />
+          <Property Name="Degree" Type="nvarchar" MaxLength="50" />
+          <Property Name="NationalID" Type="nvarchar" MaxLength="50" />
+          <Property Name="Photo" Type="image" />
+          <Property Name="Notes" Type="nvarchar" MaxLength="500" />
+          <Property Name="JoiningDate" Type="date" />
+          <Property Name="Telephone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address" Type="nvarchar" MaxLength="50" />
+          <Property Name="Mail" Type="nvarchar" MaxLength="50" />
+          <Property Name="SocialID" Type="int" />
+          <Property Name="CardNumber" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="TraineesDaily">
+          <Key>
+            <PropertyRef Name="TraineeID" />
+            <PropertyRef Name="Date" />
+          </Key>
+          <Property Name="TraineeID" Type="int" Nullable="false" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+          <Property Name="LogID" Type="int" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+          </Key>
+          <Property Name="EmployeeID" Type="int" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" />
+          <Property Name="CardNumber" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="UsersAccess">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="AddNewTrainee" Type="bit" />
+          <Property Name="SearchMen" Type="bit" />
+          <Property Name="SearchWomen" Type="bit" />
+          <Property Name="AddOffer" Type="bit" />
+          <Property Name="EditOffer" Type="bit" />
+          <Property Name="ShowTrainees" Type="bit" />
+          <Property Name="CancelTraineeProfile" Type="bit" />
+          <Property Name="AddIncomeOutCome" Type="bit" />
+          <Property Name="Settings" Type="bit" />
+          <Property Name="EditTraineeProfile" Type="bit" />
+          <Property Name="Reports" Type="bit" />
+          <Property Name="NewIncomeOutCome" Type="bit" />
+          <Property Name="AddNewUser" Type="bit" />
+          <Property Name="EditUsers" Type="bit" />
+          <Property Name="DeleteTrainee" Type="bit" />
+          <Property Name="FreezeTrainee" Type="bit" />
+        </EntityType>
+        <Association Name="FK_CashIn_Categories">
+          <End Role="Categories" Type="Self.Categories" Multiplicity="0..1" />
+          <End Role="CashIn" Type="Self.CashIn" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
+              <PropertyRef Name="CategoryID" />
+            </Principal>
+            <Dependent Role="CashIn">
+              <PropertyRef Name="CategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employees_Jobs">
+          <End Role="Jobs" Type="Self.Jobs" Multiplicity="0..1" />
+          <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Jobs">
+              <PropertyRef Name="JobID" />
+            </Principal>
+            <Dependent Role="Employees">
+              <PropertyRef Name="JobID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EmployeesDaily_Employees">
+          <End Role="Employees" Type="Self.Employees" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="EmployeesDaily" Type="Self.EmployeesDaily" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="EmployeesDaily">
+              <PropertyRef Name="EmployeeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InbodyReports_TraineeProfile">
+          <End Role="TraineeProfile" Type="Self.TraineeProfile" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="InbodyReports" Type="Self.InbodyReports" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TraineeProfile">
+              <PropertyRef Name="LogID" />
+            </Principal>
+            <Dependent Role="InbodyReports">
+              <PropertyRef Name="LogID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Interests_Invitations">
+          <End Role="Invitations" Type="Self.Invitations" Multiplicity="0..1" />
+          <End Role="Interests" Type="Self.Interests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Invitations">
+              <PropertyRef Name="InvitationID" />
+            </Principal>
+            <Dependent Role="Interests">
+              <PropertyRef Name="InvitationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Invitations_Sessions">
+          <End Role="Sessions" Type="Self.Sessions" Multiplicity="0..1" />
+          <End Role="Invitations" Type="Self.Invitations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sessions">
+              <PropertyRef Name="SessionID" />
+            </Principal>
+            <Dependent Role="Invitations">
+              <PropertyRef Name="SessionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Offers_Durations">
+          <End Role="Durations" Type="Self.Durations" Multiplicity="1" />
+          <End Role="Offers" Type="Self.Offers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Durations">
+              <PropertyRef Name="DurationID" />
+            </Principal>
+            <Dependent Role="Offers">
+              <PropertyRef Name="DurationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderDetails_Orders">
+          <End Role="Orders" Type="Self.Orders" Multiplicity="1" />
+          <End Role="OrderDetails" Type="Self.OrderDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Orders">
+              <PropertyRef Name="OrderID" />
+            </Principal>
+            <Dependent Role="OrderDetails">
+              <PropertyRef Name="OrderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderDetails_Products">
+          <End Role="Products" Type="Self.Products" Multiplicity="1" />
+          <End Role="OrderDetails" Type="Self.OrderDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="OrderDetails">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Outcomes_Categories">
+          <End Role="Categories" Type="Self.Categories" Multiplicity="0..1" />
+          <End Role="Outcomes" Type="Self.Outcomes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
+              <PropertyRef Name="CategoryID" />
+            </Principal>
+            <Dependent Role="Outcomes">
+              <PropertyRef Name="CategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Products_Categories">
+          <End Role="Categories" Type="Self.Categories" Multiplicity="0..1" />
+          <End Role="Products" Type="Self.Products" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
+              <PropertyRef Name="CategoryID" />
+            </Principal>
+            <Dependent Role="Products">
+              <PropertyRef Name="CategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TraineeProfile_Offers">
+          <End Role="Offers" Type="Self.Offers" Multiplicity="0..1" />
+          <End Role="TraineeProfile" Type="Self.TraineeProfile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Offers">
+              <PropertyRef Name="OfferID" />
+            </Principal>
+            <Dependent Role="TraineeProfile">
+              <PropertyRef Name="OfferID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TraineeProfile_Trainees">
+          <End Role="Trainees" Type="Self.Trainees" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TraineeProfile" Type="Self.TraineeProfile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trainees">
+              <PropertyRef Name="TraineeID" />
+            </Principal>
+            <Dependent Role="TraineeProfile">
+              <PropertyRef Name="TraineeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Trainees_SocialMedia">
+          <End Role="SocialMedia" Type="Self.SocialMedia" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Trainees" Type="Self.Trainees" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SocialMedia">
+              <PropertyRef Name="SocialID" />
+            </Principal>
+            <Dependent Role="Trainees">
+              <PropertyRef Name="SocialID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TraineesDaily_TraineeProfile">
+          <End Role="TraineeProfile" Type="Self.TraineeProfile" Multiplicity="0..1" />
+          <End Role="TraineesDaily" Type="Self.TraineesDaily" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TraineeProfile">
+              <PropertyRef Name="LogID" />
+            </Principal>
+            <Dependent Role="TraineesDaily">
+              <PropertyRef Name="LogID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TraineesDaily_Trainees">
+          <End Role="Trainees" Type="Self.Trainees" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TraineesDaily" Type="Self.TraineesDaily" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trainees">
+              <PropertyRef Name="TraineeID" />
+            </Principal>
+            <Dependent Role="TraineesDaily">
+              <PropertyRef Name="TraineeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsersAccess_Users">
+          <End Role="Users" Type="Self.Users" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="UsersAccess" Type="Self.UsersAccess" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="UsersAccess">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="GymModelStoreContainer">
+          <EntitySet Name="CashIn" EntityType="Self.CashIn" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Categories" EntityType="Self.Categories" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Durations" EntityType="Self.Durations" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Employees" EntityType="Self.Employees" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EmployeesDaily" EntityType="Self.EmployeesDaily" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GymData" EntityType="Self.GymData" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="InbodyReports" EntityType="Self.InbodyReports" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Interests" EntityType="Self.Interests" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Invitations" EntityType="Self.Invitations" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Jobs" EntityType="Self.Jobs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Login" EntityType="Self.Login" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Offers" EntityType="Self.Offers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OrderDetails" EntityType="Self.OrderDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Outcomes" EntityType="Self.Outcomes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sessions" EntityType="Self.Sessions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SocialMedia" EntityType="Self.SocialMedia" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Traffic" EntityType="Self.Traffic" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TraineeProfile" EntityType="Self.TraineeProfile" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Trainees" EntityType="Self.Trainees" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TraineesDaily" EntityType="Self.TraineesDaily" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UsersAccess" EntityType="Self.UsersAccess" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_CashIn_Categories" Association="Self.FK_CashIn_Categories">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="CashIn" EntitySet="CashIn" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employees_Jobs" Association="Self.FK_Employees_Jobs">
+            <End Role="Jobs" EntitySet="Jobs" />
+            <End Role="Employees" EntitySet="Employees" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EmployeesDaily_Employees" Association="Self.FK_EmployeesDaily_Employees">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="EmployeesDaily" EntitySet="EmployeesDaily" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InbodyReports_TraineeProfile" Association="Self.FK_InbodyReports_TraineeProfile">
+            <End Role="TraineeProfile" EntitySet="TraineeProfile" />
+            <End Role="InbodyReports" EntitySet="InbodyReports" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Interests_Invitations" Association="Self.FK_Interests_Invitations">
+            <End Role="Invitations" EntitySet="Invitations" />
+            <End Role="Interests" EntitySet="Interests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Invitations_Sessions" Association="Self.FK_Invitations_Sessions">
+            <End Role="Sessions" EntitySet="Sessions" />
+            <End Role="Invitations" EntitySet="Invitations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Offers_Durations" Association="Self.FK_Offers_Durations">
+            <End Role="Durations" EntitySet="Durations" />
+            <End Role="Offers" EntitySet="Offers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderDetails_Orders" Association="Self.FK_OrderDetails_Orders">
+            <End Role="Orders" EntitySet="Orders" />
+            <End Role="OrderDetails" EntitySet="OrderDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderDetails_Products" Association="Self.FK_OrderDetails_Products">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="OrderDetails" EntitySet="OrderDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Outcomes_Categories" Association="Self.FK_Outcomes_Categories">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="Outcomes" EntitySet="Outcomes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Products_Categories" Association="Self.FK_Products_Categories">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="Products" EntitySet="Products" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TraineeProfile_Offers" Association="Self.FK_TraineeProfile_Offers">
+            <End Role="Offers" EntitySet="Offers" />
+            <End Role="TraineeProfile" EntitySet="TraineeProfile" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TraineeProfile_Trainees" Association="Self.FK_TraineeProfile_Trainees">
+            <End Role="Trainees" EntitySet="Trainees" />
+            <End Role="TraineeProfile" EntitySet="TraineeProfile" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Trainees_SocialMedia" Association="Self.FK_Trainees_SocialMedia">
+            <End Role="SocialMedia" EntitySet="SocialMedia" />
+            <End Role="Trainees" EntitySet="Trainees" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TraineesDaily_TraineeProfile" Association="Self.FK_TraineesDaily_TraineeProfile">
+            <End Role="TraineeProfile" EntitySet="TraineeProfile" />
+            <End Role="TraineesDaily" EntitySet="TraineesDaily" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TraineesDaily_Trainees" Association="Self.FK_TraineesDaily_Trainees">
+            <End Role="Trainees" EntitySet="Trainees" />
+            <End Role="TraineesDaily" EntitySet="TraineesDaily" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsersAccess_Users" Association="Self.FK_UsersAccess_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="UsersAccess" EntitySet="UsersAccess" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="GymModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="GymEntities1" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Durations" EntityType="GymModel.Duration" />
+          <EntitySet Name="Jobs" EntityType="GymModel.Job" />
+          <EntitySet Name="SocialMedias" EntityType="GymModel.SocialMedia" />
+          <EntitySet Name="Interests" EntityType="GymModel.Interest" />
+          <EntitySet Name="Invitations" EntityType="GymModel.Invitation" />
+          <AssociationSet Name="FK_Interests_Invitations" Association="GymModel.FK_Interests_Invitations">
+            <End Role="Invitation" EntitySet="Invitations" />
+            <End Role="Interest" EntitySet="Interests" />
+          </AssociationSet>
+          <EntitySet Name="Sessions" EntityType="GymModel.Session" />
+          <AssociationSet Name="FK_Invitations_Sessions" Association="GymModel.FK_Invitations_Sessions">
+            <End Role="Session" EntitySet="Sessions" />
+            <End Role="Invitation" EntitySet="Invitations" />
+          </AssociationSet>
+          <EntitySet Name="Categories" EntityType="GymModel.Category" />
+          <EntitySet Name="Products" EntityType="GymModel.Product" />
+          <AssociationSet Name="FK_Products_Categories" Association="GymModel.FK_Products_Categories">
+            <End Role="Category" EntitySet="Categories" />
+            <End Role="Product" EntitySet="Products" />
+          </AssociationSet>
+          <EntitySet Name="OrderDetails" EntityType="GymModel.OrderDetail" />
+          <AssociationSet Name="FK_OrderDetails_Products" Association="GymModel.FK_OrderDetails_Products">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="OrderDetail" EntitySet="OrderDetails" />
+          </AssociationSet>
+          <EntitySet Name="Outcomes" EntityType="GymModel.Outcome" />
+          <AssociationSet Name="FK_Outcomes_Categories" Association="GymModel.FK_Outcomes_Categories">
+            <End Role="Category" EntitySet="Categories" />
+            <End Role="Outcome" EntitySet="Outcomes" />
+          </AssociationSet>
+          <EntitySet Name="Orders" EntityType="GymModel.Order" />
+          <AssociationSet Name="FK_OrderDetails_Orders" Association="GymModel.FK_OrderDetails_Orders">
+            <End Role="Order" EntitySet="Orders" />
+            <End Role="OrderDetail" EntitySet="OrderDetails" />
+          </AssociationSet>
+          <EntitySet Name="Users" EntityType="GymModel.User" />
+          <EntitySet Name="Employees" EntityType="GymModel.Employee" />
+          <AssociationSet Name="FK_Employees_Jobs" Association="GymModel.FK_Employees_Jobs">
+            <End Role="Job" EntitySet="Jobs" />
+            <End Role="Employee" EntitySet="Employees" />
+          </AssociationSet>
+          <EntitySet Name="Traffic" EntityType="GymModel.Traffic" />
+          <EntitySet Name="Offers" EntityType="GymModel.Offer" />
+          <AssociationSet Name="FK_Offers_Durations" Association="GymModel.FK_Offers_Durations">
+            <End Role="Duration" EntitySet="Durations" />
+            <End Role="Offer" EntitySet="Offers" />
+          </AssociationSet>
+          <EntitySet Name="EmployeesDailies" EntityType="GymModel.EmployeesDaily" />
+          <EntitySet Name="UsersAccesses" EntityType="GymModel.UsersAccess" />
+          <AssociationSet Name="FK_EmployeesDaily_Employees" Association="GymModel.FK_EmployeesDaily_Employees">
+            <End Role="Employee" EntitySet="Employees" />
+            <End Role="EmployeesDaily" EntitySet="EmployeesDailies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsersAccess_Users" Association="GymModel.FK_UsersAccess_Users">
+            <End Role="User" EntitySet="Users" />
+            <End Role="UsersAccess" EntitySet="UsersAccesses" />
+          </AssociationSet>
+          <EntitySet Name="Logins" EntityType="GymModel.Login" />
+          <EntitySet Name="InbodyReports" EntityType="GymModel.InbodyReport" />
+          <EntitySet Name="TraineesDailies" EntityType="GymModel.TraineesDaily" />
+          <EntitySet Name="Trainees" EntityType="GymModel.Trainee" />
+          <AssociationSet Name="FK_Trainees_SocialMedia" Association="GymModel.FK_Trainees_SocialMedia">
+            <End Role="SocialMedia" EntitySet="SocialMedias" />
+            <End Role="Trainee" EntitySet="Trainees" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TraineesDaily_Trainees" Association="GymModel.FK_TraineesDaily_Trainees">
+            <End Role="Trainee" EntitySet="Trainees" />
+            <End Role="TraineesDaily" EntitySet="TraineesDailies" />
+          </AssociationSet>
+          <EntitySet Name="TraineeProfiles" EntityType="GymModel.TraineeProfile" />
+          <AssociationSet Name="FK_InbodyReports_TraineeProfile" Association="GymModel.FK_InbodyReports_TraineeProfile">
+            <End Role="TraineeProfile" EntitySet="TraineeProfiles" />
+            <End Role="InbodyReport" EntitySet="InbodyReports" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TraineeProfile_Offers" Association="GymModel.FK_TraineeProfile_Offers">
+            <End Role="Offer" EntitySet="Offers" />
+            <End Role="TraineeProfile" EntitySet="TraineeProfiles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TraineeProfile_Trainees" Association="GymModel.FK_TraineeProfile_Trainees">
+            <End Role="Trainee" EntitySet="Trainees" />
+            <End Role="TraineeProfile" EntitySet="TraineeProfiles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TraineesDaily_TraineeProfile" Association="GymModel.FK_TraineesDaily_TraineeProfile">
+            <End Role="TraineeProfile" EntitySet="TraineeProfiles" />
+            <End Role="TraineesDaily" EntitySet="TraineesDailies" />
+          </AssociationSet>
+          <EntitySet Name="CashIns" EntityType="GymModel.CashIn" />
+          <AssociationSet Name="FK_CashIn_Categories" Association="GymModel.FK_CashIn_Categories">
+            <End Role="Category" EntitySet="Categories" />
+            <End Role="CashIn" EntitySet="CashIns" />
+          </AssociationSet>
+          <EntitySet Name="GymDatas" EntityType="GymModel.GymData" />
+          </EntityContainer>
+        <EntityType Name="Duration">
+          <Key>
+            <PropertyRef Name="DurationID" />
+          </Key>
+          <Property Name="DurationID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="DurationName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Offers" Relationship="GymModel.FK_Offers_Durations" FromRole="Duration" ToRole="Offer" />
+        </EntityType>
+        <EntityType Name="Job">
+          <Key>
+            <PropertyRef Name="JobID" />
+          </Key>
+          <Property Name="JobID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="JobName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Salary" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="HourPrice" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Employees" Relationship="GymModel.FK_Employees_Jobs" FromRole="Job" ToRole="Employee" />
+        </EntityType>
+        <EntityType Name="SocialMedia">
+          <Key>
+            <PropertyRef Name="SocialID" />
+          </Key>
+          <Property Name="SocialID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="number" Type="Int32" />
+          <NavigationProperty Name="Trainees" Relationship="GymModel.FK_Trainees_SocialMedia" FromRole="SocialMedia" ToRole="Trainee" />
+        </EntityType>
+        <EntityType Name="Interest">
+          <Key>
+            <PropertyRef Name="InterestID" />
+          </Key>
+          <Property Type="Int32" Name="InterestID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Boolean" Name="Aerobics" />
+          <Property Type="Boolean" Name="Running" />
+          <Property Type="Boolean" Name="Swimming" />
+          <Property Type="Boolean" Name="PersonalTraining" />
+          <Property Type="Boolean" Name="Rohabilitation" />
+          <Property Type="Boolean" Name="Fitness" />
+          <Property Type="Boolean" Name="WeightGaining" />
+          <Property Type="Boolean" Name="WeightLoss" />
+          <Property Type="Boolean" Name="Mas" />
+          <Property Type="Boolean" Name="BodyBuilding" />
+          <Property Type="Boolean" Name="Spa" />
+          <Property Type="Boolean" Name="Other" />
+          <Property Type="Int32" Name="InvitationID" />
+          <NavigationProperty Name="Invitation" Relationship="GymModel.FK_Interests_Invitations" FromRole="Interest" ToRole="Invitation" />
+        </EntityType>
+        <EntityType Name="Invitation">
+          <Key>
+            <PropertyRef Name="InvitationID" />
+          </Key>
+          <Property Type="Int32" Name="InvitationID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Address" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Phone" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Gender" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Nationality" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="EmployeeID" />
+          <Property Type="Int32" Name="TraineeID" />
+          <Property Type="DateTime" Name="Date" Precision="3" />
+          <NavigationProperty Name="Interests" Relationship="GymModel.FK_Interests_Invitations" FromRole="Invitation" ToRole="Interest" />
+          <Property Type="Int32" Name="SessionID" />
+          <Property Type="String" Name="Price" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Type" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Session" Relationship="GymModel.FK_Invitations_Sessions" FromRole="Invitation" ToRole="Session" />
+        </EntityType>
+        <Association Name="FK_Interests_Invitations">
+          <End Type="GymModel.Invitation" Role="Invitation" Multiplicity="0..1" />
+          <End Type="GymModel.Interest" Role="Interest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Invitation">
+              <PropertyRef Name="InvitationID" />
+            </Principal>
+            <Dependent Role="Interest">
+              <PropertyRef Name="InvitationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Session">
+          <Key>
+            <PropertyRef Name="SessionID" />
+          </Key>
+          <Property Type="Int32" Name="SessionID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="SessionName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SessionPrice" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Invitations" Relationship="GymModel.FK_Invitations_Sessions" FromRole="Session" ToRole="Invitation" />
+        </EntityType>
+        <Association Name="FK_Invitations_Sessions">
+          <End Type="GymModel.Session" Role="Session" Multiplicity="0..1" />
+          <End Type="GymModel.Invitation" Role="Invitation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Session">
+              <PropertyRef Name="SessionID" />
+            </Principal>
+            <Dependent Role="Invitation">
+              <PropertyRef Name="SessionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="CategoryID" />
+          </Key>
+          <Property Type="Int32" Name="CategoryID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="CategoryName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Products" Relationship="GymModel.FK_Products_Categories" FromRole="Category" ToRole="Product" />
+          <Property Type="String" Name="Type" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Outcomes" Relationship="GymModel.FK_Outcomes_Categories" FromRole="Category" ToRole="Outcome" />
+          <NavigationProperty Name="CashIns" Relationship="GymModel.FK_CashIn_Categories" FromRole="Category" ToRole="CashIn" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="ProductID" />
+          </Key>
+          <Property Type="Int32" Name="CategoryID" />
+          <Property Type="Int32" Name="ProductID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="ProductName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Buy" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Sell" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Category" Relationship="GymModel.FK_Products_Categories" FromRole="Product" ToRole="Category" />
+          <NavigationProperty Name="OrderDetails" Relationship="GymModel.FK_OrderDetails_Products" FromRole="Product" ToRole="OrderDetail" />
+        </EntityType>
+        <Association Name="FK_Products_Categories">
+          <End Type="GymModel.Category" Role="Category" Multiplicity="0..1" />
+          <End Type="GymModel.Product" Role="Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="CategoryID" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="CategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="OrderDetail">
+          <Key>
+            <PropertyRef Name="OrderID" />
+            <PropertyRef Name="ProductID" />
+          </Key>
+          <Property Type="Int32" Name="OrderID" Nullable="false" />
+          <Property Type="Int32" Name="ProductID" Nullable="false" />
+          <Property Type="String" Name="Sell" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Number" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Price" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Product" Relationship="GymModel.FK_OrderDetails_Products" FromRole="OrderDetail" ToRole="Product" />
+          <NavigationProperty Name="Order" Relationship="GymModel.FK_OrderDetails_Orders" FromRole="OrderDetail" ToRole="Order" />
+        </EntityType>
+        <Association Name="FK_OrderDetails_Products">
+          <End Type="GymModel.Product" Role="Product" Multiplicity="1" />
+          <End Type="GymModel.OrderDetail" Role="OrderDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="OrderDetail">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Outcome">
+          <Key>
+            <PropertyRef Name="OutcomeID" />
+          </Key>
+          <Property Type="Int32" Name="OutcomeID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="CategoryID" />
+          <Property Type="String" Name="Desc" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="RecieptID" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Price" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Category" Relationship="GymModel.FK_Outcomes_Categories" FromRole="Outcome" ToRole="Category" />
+          <Property Type="DateTime" Name="Date" Precision="3" />
+          <Property Type="Int32" Name="TraineeID" />
+          <Property Name="userName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <Association Name="FK_Outcomes_Categories">
+          <End Type="GymModel.Category" Role="Category" Multiplicity="0..1" />
+          <End Type="GymModel.Outcome" Role="Outcome" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="CategoryID" />
+            </Principal>
+            <Dependent Role="Outcome">
+              <PropertyRef Name="CategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="OrderID" />
+          </Key>
+          <Property Type="Int32" Name="OrderID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="Date" Precision="3" />
+          <Property Type="String" Name="Desc" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Total" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="OrderDetails" Relationship="GymModel.FK_OrderDetails_Orders" FromRole="Order" ToRole="OrderDetail" />
+          <Property Name="ReceiptID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <Association Name="FK_OrderDetails_Orders">
+          <End Type="GymModel.Order" Role="Order" Multiplicity="1" />
+          <End Type="GymModel.OrderDetail" Role="OrderDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Order">
+              <PropertyRef Name="OrderID" />
+            </Principal>
+            <Dependent Role="OrderDetail">
+              <PropertyRef Name="OrderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+          </Key>
+          <Property Type="Int32" Name="EmployeeID" Nullable="false" />
+          <Property Type="String" Name="UserName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Password" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CardNumber" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="UsersAccess" Relationship="GymModel.FK_UsersAccess_Users" FromRole="User" ToRole="UsersAccess" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+          </Key>
+          <Property Type="Int32" Name="EmployeeID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="EmployeeName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="Birthdate" Precision="0" />
+          <Property Type="String" Name="Gender" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Status" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Nationality" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Degree" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="NationalID" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Binary" Name="Photo" MaxLength="Max" FixedLength="false" />
+          <Property Type="String" Name="Notes" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="HiringDate" Precision="0" />
+          <Property Type="String" Name="Telephone" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Phone" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Address" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Mail" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="JobID" />
+          <Property Type="String" Name="Experience" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Type" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Salary" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="From" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="To" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CardNumber" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Job" Relationship="GymModel.FK_Employees_Jobs" FromRole="Employee" ToRole="Job" />
+          <NavigationProperty Name="EmployeesDailies" Relationship="GymModel.FK_EmployeesDaily_Employees" FromRole="Employee" ToRole="EmployeesDaily" />
+        </EntityType>
+        <Association Name="FK_Employees_Jobs">
+          <End Type="GymModel.Job" Role="Job" Multiplicity="0..1" />
+          <End Type="GymModel.Employee" Role="Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Job">
+              <PropertyRef Name="JobID" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="JobID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Traffic">
+          <Key>
+            <PropertyRef Name="DayDate" />
+          </Key>
+          <Property Type="DateTime" Name="DayDate" Nullable="false" Precision="0" />
+          <Property Type="Double" Name="TotalIncome" />
+          <Property Type="Double" Name="TotalOutcome" />
+          <Property Type="Boolean" Name="Status" />
+        </EntityType>
+        <EntityType Name="Offer">
+          <Key>
+            <PropertyRef Name="OfferID" />
+          </Key>
+          <Property Type="Int32" Name="OfferID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="OfferName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="DurationID" Nullable="false" />
+          <Property Type="String" Name="Price" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Type" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="SessionsNum" />
+          <Property Type="Int32" Name="Freezing" />
+          <Property Type="Int32" Name="Invitations" />
+          <Property Type="Int32" Name="SPA" />
+          <Property Type="Int32" Name="Inbody" />
+          <Property Type="Int32" Name="Massage" />
+          <Property Type="Int32" Name="Others" />
+          <Property Type="String" Name="From" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="To" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Duration" Relationship="GymModel.FK_Offers_Durations" FromRole="Offer" ToRole="Duration" />
+          <Property Type="Boolean" Name="frozen" />
+          <NavigationProperty Name="TraineeProfiles" Relationship="GymModel.FK_TraineeProfile_Offers" FromRole="Offer" ToRole="TraineeProfile" />
+        </EntityType>
+        <Association Name="FK_Offers_Durations">
+          <End Type="GymModel.Duration" Role="Duration" Multiplicity="1" />
+          <End Type="GymModel.Offer" Role="Offer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Duration">
+              <PropertyRef Name="DurationID" />
+            </Principal>
+            <Dependent Role="Offer">
+              <PropertyRef Name="DurationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="EmployeesDaily">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+            <PropertyRef Name="DateComing" />
+          </Key>
+          <Property Name="EmployeeID" Type="Int32" Nullable="false" />
+          <Property Name="DateComing" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="DateLeaving" Type="DateTime" Precision="3" />
+          <Property Name="Hours" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Editable" Type="Boolean" />
+          <NavigationProperty Name="Employee" Relationship="GymModel.FK_EmployeesDaily_Employees" FromRole="EmployeesDaily" ToRole="Employee" />
+        </EntityType>
+        <EntityType Name="UsersAccess">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="AddNewTrainee" Type="Boolean" />
+          <Property Name="SearchMen" Type="Boolean" />
+          <Property Name="SearchWomen" Type="Boolean" />
+          <Property Name="AddOffer" Type="Boolean" />
+          <Property Name="EditOffer" Type="Boolean" />
+          <Property Name="ShowTrainees" Type="Boolean" />
+          <Property Name="CancelTraineeProfile" Type="Boolean" />
+          <Property Name="AddIncomeOutCome" Type="Boolean" />
+          <Property Name="Settings" Type="Boolean" />
+          <Property Name="EditTraineeProfile" Type="Boolean" />
+          <Property Name="Reports" Type="Boolean" />
+          <Property Name="NewIncomeOutCome" Type="Boolean" />
+          <Property Name="AddNewUser" Type="Boolean" />
+          <Property Name="EditUsers" Type="Boolean" />
+          <NavigationProperty Name="User" Relationship="GymModel.FK_UsersAccess_Users" FromRole="UsersAccess" ToRole="User" />
+          <Property Name="DeleteTrainee" Type="Boolean" />
+          <Property Name="FreezeTrainee" Type="Boolean" />
+        </EntityType>
+        <Association Name="FK_EmployeesDaily_Employees">
+          <End Type="GymModel.Employee" Role="Employee" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="GymModel.EmployeesDaily" Role="EmployeesDaily" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="EmployeesDaily">
+              <PropertyRef Name="EmployeeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsersAccess_Users">
+          <End Type="GymModel.User" Role="User" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="GymModel.UsersAccess" Role="UsersAccess" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="UsersAccess">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Login">
+          <Key>
+            <PropertyRef Name="date" />
+          </Key>
+          <Property Name="date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="userName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="action" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="InbodyReport">
+          <Key>
+            <PropertyRef Name="InodyID" />
+          </Key>
+          <Property Name="InodyID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LogID" Type="Int32" />
+          <Property Name="Height" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Weight" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BMI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BMR" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Fat_" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FatMass" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FFM" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TBW" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="VFHDR" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FAT__" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FatMass_" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="WholeBody" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RightLeg" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LeftLeg" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RightArm" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LeftArm" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RightLegFat_" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RightLegFatMass" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RightLegFFM" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RightLegMuscle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LeftLegFat_" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LeftLegFatMass" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LeftLegFFM" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LeftLegMuscle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RightArmFat_" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RightArmFatMass" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RightArmFFM" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RightArmMuscle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LeftArmFat_" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LeftArmFatMass" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LeftArmFFM" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LeftArmMuscle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TrunkFat_" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TrunkFatMass" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TrunkFFM" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TrunkMuscle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="TraineeProfile" Relationship="GymModel.FK_InbodyReports_TraineeProfile" FromRole="InbodyReport" ToRole="TraineeProfile" />
+        </EntityType>
+        <EntityType Name="TraineesDaily">
+          <Key>
+            <PropertyRef Name="TraineeID" />
+            <PropertyRef Name="Date" />
+          </Key>
+          <Property Name="TraineeID" Type="Int32" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LogID" Type="Int32" />
+          <NavigationProperty Name="Trainee" Relationship="GymModel.FK_TraineesDaily_Trainees" FromRole="TraineesDaily" ToRole="Trainee" />
+          <NavigationProperty Name="TraineeProfile" Relationship="GymModel.FK_TraineesDaily_TraineeProfile" FromRole="TraineesDaily" ToRole="TraineeProfile" />
+        </EntityType>
+        <EntityType Name="Trainee">
+          <Key>
+            <PropertyRef Name="TraineeID" />
+          </Key>
+          <Property Name="TraineeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TraineeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Birtdate" Type="DateTime" Precision="0" />
+          <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Nationality" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Degree" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NationalID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Notes" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="JoiningDate" Type="DateTime" Precision="0" />
+          <Property Name="Telephone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SocialID" Type="Int32" />
+          <Property Name="CardNumber" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="SocialMedia" Relationship="GymModel.FK_Trainees_SocialMedia" FromRole="Trainee" ToRole="SocialMedia" />
+          <NavigationProperty Name="TraineesDailies" Relationship="GymModel.FK_TraineesDaily_Trainees" FromRole="Trainee" ToRole="TraineesDaily" />
+          <NavigationProperty Name="TraineeProfiles" Relationship="GymModel.FK_TraineeProfile_Trainees" FromRole="Trainee" ToRole="TraineeProfile" />
+        </EntityType>
+        <Association Name="FK_Trainees_SocialMedia">
+          <End Type="GymModel.SocialMedia" Role="SocialMedia" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="GymModel.Trainee" Role="Trainee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SocialMedia">
+              <PropertyRef Name="SocialID" />
+            </Principal>
+            <Dependent Role="Trainee">
+              <PropertyRef Name="SocialID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TraineesDaily_Trainees">
+          <End Type="GymModel.Trainee" Role="Trainee" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="GymModel.TraineesDaily" Role="TraineesDaily" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trainee">
+              <PropertyRef Name="TraineeID" />
+            </Principal>
+            <Dependent Role="TraineesDaily">
+              <PropertyRef Name="TraineeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="TraineeProfile">
+          <Key>
+            <PropertyRef Name="LogID" />
+          </Key>
+          <Property Name="LogID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TraineeID" Type="Int32" />
+          <Property Name="OfferID" Type="Int32" />
+          <Property Name="From" Type="DateTime" Precision="0" />
+          <Property Name="To" Type="DateTime" Precision="0" />
+          <Property Name="Price" Type="Double" />
+          <Property Name="Paid" Type="Double" />
+          <Property Name="Carry" Type="Double" />
+          <Property Name="PaymentMethod" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SessionsNum" Type="Int32" />
+          <Property Name="Freezing" Type="Int32" />
+          <Property Name="Invitations" Type="Int32" />
+          <Property Name="Inbody" Type="Int32" />
+          <Property Name="SPA" Type="Int32" />
+          <Property Name="Massage" Type="Int32" />
+          <Property Name="Others" Type="Int32" />
+          <Property Name="Active" Type="Boolean" />
+          <Property Name="Frozen" Type="Boolean" />
+          <Property Name="Canceled" Type="Boolean" />
+          <Property Name="Transfered" Type="Boolean" />
+          <Property Name="TrainerID" Type="Int32" />
+          <Property Name="EmployeeID" Type="Int32" />
+          <NavigationProperty Name="InbodyReports" Relationship="GymModel.FK_InbodyReports_TraineeProfile" FromRole="TraineeProfile" ToRole="InbodyReport" />
+          <NavigationProperty Name="Offer" Relationship="GymModel.FK_TraineeProfile_Offers" FromRole="TraineeProfile" ToRole="Offer" />
+          <NavigationProperty Name="Trainee" Relationship="GymModel.FK_TraineeProfile_Trainees" FromRole="TraineeProfile" ToRole="Trainee" />
+          <NavigationProperty Name="TraineesDailies" Relationship="GymModel.FK_TraineesDaily_TraineeProfile" FromRole="TraineeProfile" ToRole="TraineesDaily" />
+        </EntityType>
+        <Association Name="FK_InbodyReports_TraineeProfile">
+          <End Type="GymModel.TraineeProfile" Role="TraineeProfile" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="GymModel.InbodyReport" Role="InbodyReport" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TraineeProfile">
+              <PropertyRef Name="LogID" />
+            </Principal>
+            <Dependent Role="InbodyReport">
+              <PropertyRef Name="LogID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TraineeProfile_Offers">
+          <End Type="GymModel.Offer" Role="Offer" Multiplicity="0..1" />
+          <End Type="GymModel.TraineeProfile" Role="TraineeProfile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Offer">
+              <PropertyRef Name="OfferID" />
+            </Principal>
+            <Dependent Role="TraineeProfile">
+              <PropertyRef Name="OfferID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TraineeProfile_Trainees">
+          <End Type="GymModel.Trainee" Role="Trainee" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="GymModel.TraineeProfile" Role="TraineeProfile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trainee">
+              <PropertyRef Name="TraineeID" />
+            </Principal>
+            <Dependent Role="TraineeProfile">
+              <PropertyRef Name="TraineeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TraineesDaily_TraineeProfile">
+          <End Type="GymModel.TraineeProfile" Role="TraineeProfile" Multiplicity="0..1" />
+          <End Type="GymModel.TraineesDaily" Role="TraineesDaily" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TraineeProfile">
+              <PropertyRef Name="LogID" />
+            </Principal>
+            <Dependent Role="TraineesDaily">
+              <PropertyRef Name="LogID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="CashIn">
+          <Key>
+            <PropertyRef Name="CashID" />
+          </Key>
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CategoryID" Type="Int32" />
+          <Property Name="RecieptID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Price" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Desc" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="TraineeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="userName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OfferName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CashID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Category" Relationship="GymModel.FK_CashIn_Categories" FromRole="CashIn" ToRole="Category" />
+        </EntityType>
+        <Association Name="FK_CashIn_Categories">
+          <End Type="GymModel.Category" Role="Category" Multiplicity="0..1" />
+          <End Type="GymModel.CashIn" Role="CashIn" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="CategoryID" />
+            </Principal>
+            <Dependent Role="CashIn">
+              <PropertyRef Name="CategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="GymData">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Phone1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Phone2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Logo" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="GymModelStoreContainer" CdmEntityContainer="GymEntities1">
+          <EntitySetMapping Name="Durations">
+            <EntityTypeMapping TypeName="GymModel.Duration">
+              <MappingFragment StoreEntitySet="Durations">
+                <ScalarProperty Name="DurationID" ColumnName="DurationID" />
+                <ScalarProperty Name="DurationName" ColumnName="DurationName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Jobs">
+            <EntityTypeMapping TypeName="GymModel.Job">
+              <MappingFragment StoreEntitySet="Jobs">
+                <ScalarProperty Name="JobID" ColumnName="JobID" />
+                <ScalarProperty Name="JobName" ColumnName="JobName" />
+                <ScalarProperty Name="Salary" ColumnName="Salary" />
+                <ScalarProperty Name="HourPrice" ColumnName="HourPrice" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SocialMedias">
+            <EntityTypeMapping TypeName="GymModel.SocialMedia">
+              <MappingFragment StoreEntitySet="SocialMedia">
+                <ScalarProperty Name="SocialID" ColumnName="SocialID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="number" ColumnName="number" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Interests">
+            <EntityTypeMapping TypeName="GymModel.Interest">
+              <MappingFragment StoreEntitySet="Interests">
+                <ScalarProperty Name="InvitationID" ColumnName="InvitationID" />
+                <ScalarProperty Name="Other" ColumnName="Other" />
+                <ScalarProperty Name="Spa" ColumnName="Spa" />
+                <ScalarProperty Name="BodyBuilding" ColumnName="BodyBuilding" />
+                <ScalarProperty Name="Mas" ColumnName="Mas" />
+                <ScalarProperty Name="WeightLoss" ColumnName="WeightLoss" />
+                <ScalarProperty Name="WeightGaining" ColumnName="WeightGaining" />
+                <ScalarProperty Name="Fitness" ColumnName="Fitness" />
+                <ScalarProperty Name="Rohabilitation" ColumnName="Rohabilitation" />
+                <ScalarProperty Name="PersonalTraining" ColumnName="PersonalTraining" />
+                <ScalarProperty Name="Swimming" ColumnName="Swimming" />
+                <ScalarProperty Name="Running" ColumnName="Running" />
+                <ScalarProperty Name="Aerobics" ColumnName="Aerobics" />
+                <ScalarProperty Name="InterestID" ColumnName="InterestID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Invitations">
+            <EntityTypeMapping TypeName="GymModel.Invitation">
+              <MappingFragment StoreEntitySet="Invitations">
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="SessionID" ColumnName="SessionID" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="TraineeID" ColumnName="TraineeID" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="InvitationID" ColumnName="InvitationID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sessions">
+            <EntityTypeMapping TypeName="GymModel.Session">
+              <MappingFragment StoreEntitySet="Sessions">
+                <ScalarProperty Name="SessionPrice" ColumnName="SessionPrice" />
+                <ScalarProperty Name="SessionName" ColumnName="SessionName" />
+                <ScalarProperty Name="SessionID" ColumnName="SessionID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Categories">
+            <EntityTypeMapping TypeName="GymModel.Category">
+              <MappingFragment StoreEntitySet="Categories">
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Products">
+            <EntityTypeMapping TypeName="GymModel.Product">
+              <MappingFragment StoreEntitySet="Products">
+                <ScalarProperty Name="Sell" ColumnName="Sell" />
+                <ScalarProperty Name="Buy" ColumnName="Buy" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OrderDetails">
+            <EntityTypeMapping TypeName="GymModel.OrderDetail">
+              <MappingFragment StoreEntitySet="OrderDetails">
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Number" ColumnName="Number" />
+                <ScalarProperty Name="Sell" ColumnName="Sell" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Outcomes">
+            <EntityTypeMapping TypeName="GymModel.Outcome">
+              <MappingFragment StoreEntitySet="Outcomes">
+                <ScalarProperty Name="userName" ColumnName="userName" />
+                <ScalarProperty Name="TraineeID" ColumnName="TraineeID" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="RecieptID" ColumnName="RecieptID" />
+                <ScalarProperty Name="Desc" ColumnName="Desc" />
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+                <ScalarProperty Name="OutcomeID" ColumnName="OutcomeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Orders">
+            <EntityTypeMapping TypeName="GymModel.Order">
+              <MappingFragment StoreEntitySet="Orders">
+                <ScalarProperty Name="ReceiptID" ColumnName="ReceiptID" />
+                <ScalarProperty Name="Total" ColumnName="Total" />
+                <ScalarProperty Name="Desc" ColumnName="Desc" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="GymModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Employees">
+            <EntityTypeMapping TypeName="GymModel.Employee">
+              <MappingFragment StoreEntitySet="Employees">
+                <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+                <ScalarProperty Name="To" ColumnName="To" />
+                <ScalarProperty Name="From" ColumnName="From" />
+                <ScalarProperty Name="Salary" ColumnName="Salary" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Experience" ColumnName="Experience" />
+                <ScalarProperty Name="JobID" ColumnName="JobID" />
+                <ScalarProperty Name="Mail" ColumnName="Mail" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+                <ScalarProperty Name="HiringDate" ColumnName="HiringDate" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+                <ScalarProperty Name="NationalID" ColumnName="NationalID" />
+                <ScalarProperty Name="Degree" ColumnName="Degree" />
+                <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Birthdate" ColumnName="Birthdate" />
+                <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Traffic">
+            <EntityTypeMapping TypeName="GymModel.Traffic">
+              <MappingFragment StoreEntitySet="Traffic">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="TotalOutcome" ColumnName="TotalOutcome" />
+                <ScalarProperty Name="TotalIncome" ColumnName="TotalIncome" />
+                <ScalarProperty Name="DayDate" ColumnName="DayDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Offers">
+            <EntityTypeMapping TypeName="GymModel.Offer">
+              <MappingFragment StoreEntitySet="Offers">
+                <ScalarProperty Name="frozen" ColumnName="frozen" />
+                <ScalarProperty Name="To" ColumnName="To" />
+                <ScalarProperty Name="From" ColumnName="From" />
+                <ScalarProperty Name="Others" ColumnName="Others" />
+                <ScalarProperty Name="Massage" ColumnName="Massage" />
+                <ScalarProperty Name="Inbody" ColumnName="Inbody" />
+                <ScalarProperty Name="SPA" ColumnName="SPA" />
+                <ScalarProperty Name="Invitations" ColumnName="Invitations" />
+                <ScalarProperty Name="Freezing" ColumnName="Freezing" />
+                <ScalarProperty Name="SessionsNum" ColumnName="SessionsNum" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="DurationID" ColumnName="DurationID" />
+                <ScalarProperty Name="OfferName" ColumnName="OfferName" />
+                <ScalarProperty Name="OfferID" ColumnName="OfferID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EmployeesDailies">
+            <EntityTypeMapping TypeName="GymModel.EmployeesDaily">
+              <MappingFragment StoreEntitySet="EmployeesDaily">
+                <ScalarProperty Name="Editable" ColumnName="Editable" />
+                <ScalarProperty Name="Hours" ColumnName="Hours" />
+                <ScalarProperty Name="DateLeaving" ColumnName="DateLeaving" />
+                <ScalarProperty Name="DateComing" ColumnName="DateComing" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UsersAccesses">
+            <EntityTypeMapping TypeName="GymModel.UsersAccess">
+              <MappingFragment StoreEntitySet="UsersAccess">
+                <ScalarProperty Name="FreezeTrainee" ColumnName="FreezeTrainee" />
+                <ScalarProperty Name="DeleteTrainee" ColumnName="DeleteTrainee" />
+                <ScalarProperty Name="EditUsers" ColumnName="EditUsers" />
+                <ScalarProperty Name="AddNewUser" ColumnName="AddNewUser" />
+                <ScalarProperty Name="NewIncomeOutCome" ColumnName="NewIncomeOutCome" />
+                <ScalarProperty Name="Reports" ColumnName="Reports" />
+                <ScalarProperty Name="EditTraineeProfile" ColumnName="EditTraineeProfile" />
+                <ScalarProperty Name="Settings" ColumnName="Settings" />
+                <ScalarProperty Name="AddIncomeOutCome" ColumnName="AddIncomeOutCome" />
+                <ScalarProperty Name="CancelTraineeProfile" ColumnName="CancelTraineeProfile" />
+                <ScalarProperty Name="ShowTrainees" ColumnName="ShowTrainees" />
+                <ScalarProperty Name="EditOffer" ColumnName="EditOffer" />
+                <ScalarProperty Name="AddOffer" ColumnName="AddOffer" />
+                <ScalarProperty Name="SearchWomen" ColumnName="SearchWomen" />
+                <ScalarProperty Name="SearchMen" ColumnName="SearchMen" />
+                <ScalarProperty Name="AddNewTrainee" ColumnName="AddNewTrainee" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Logins">
+            <EntityTypeMapping TypeName="GymModel.Login">
+              <MappingFragment StoreEntitySet="Login">
+                <ScalarProperty Name="action" ColumnName="action" />
+                <ScalarProperty Name="userName" ColumnName="userName" />
+                <ScalarProperty Name="date" ColumnName="date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="InbodyReports">
+            <EntityTypeMapping TypeName="GymModel.InbodyReport">
+              <MappingFragment StoreEntitySet="InbodyReports">
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="TrunkMuscle" ColumnName="TrunkMuscle" />
+                <ScalarProperty Name="TrunkFFM" ColumnName="TrunkFFM" />
+                <ScalarProperty Name="TrunkFatMass" ColumnName="TrunkFatMass" />
+                <ScalarProperty Name="TrunkFat_" ColumnName="TrunkFat%" />
+                <ScalarProperty Name="LeftArmMuscle" ColumnName="LeftArmMuscle" />
+                <ScalarProperty Name="LeftArmFFM" ColumnName="LeftArmFFM" />
+                <ScalarProperty Name="LeftArmFatMass" ColumnName="LeftArmFatMass" />
+                <ScalarProperty Name="LeftArmFat_" ColumnName="LeftArmFat%" />
+                <ScalarProperty Name="RightArmMuscle" ColumnName="RightArmMuscle" />
+                <ScalarProperty Name="RightArmFFM" ColumnName="RightArmFFM" />
+                <ScalarProperty Name="RightArmFatMass" ColumnName="RightArmFatMass" />
+                <ScalarProperty Name="RightArmFat_" ColumnName="RightArmFat%" />
+                <ScalarProperty Name="LeftLegMuscle" ColumnName="LeftLegMuscle" />
+                <ScalarProperty Name="LeftLegFFM" ColumnName="LeftLegFFM" />
+                <ScalarProperty Name="LeftLegFatMass" ColumnName="LeftLegFatMass" />
+                <ScalarProperty Name="LeftLegFat_" ColumnName="LeftLegFat%" />
+                <ScalarProperty Name="RightLegMuscle" ColumnName="RightLegMuscle" />
+                <ScalarProperty Name="RightLegFFM" ColumnName="RightLegFFM" />
+                <ScalarProperty Name="RightLegFatMass" ColumnName="RightLegFatMass" />
+                <ScalarProperty Name="RightLegFat_" ColumnName="RightLegFat%" />
+                <ScalarProperty Name="LeftArm" ColumnName="LeftArm" />
+                <ScalarProperty Name="RightArm" ColumnName="RightArm" />
+                <ScalarProperty Name="LeftLeg" ColumnName="LeftLeg" />
+                <ScalarProperty Name="RightLeg" ColumnName="RightLeg" />
+                <ScalarProperty Name="WholeBody" ColumnName="WholeBody" />
+                <ScalarProperty Name="FatMass_" ColumnName="FatMass_" />
+                <ScalarProperty Name="FAT__" ColumnName="FAT%_" />
+                <ScalarProperty Name="VFHDR" ColumnName="VFHDR" />
+                <ScalarProperty Name="TBW" ColumnName="TBW" />
+                <ScalarProperty Name="FFM" ColumnName="FFM" />
+                <ScalarProperty Name="FatMass" ColumnName="FatMass" />
+                <ScalarProperty Name="Fat_" ColumnName="Fat%" />
+                <ScalarProperty Name="BMR" ColumnName="BMR" />
+                <ScalarProperty Name="BMI" ColumnName="BMI" />
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="Height" ColumnName="Height" />
+                <ScalarProperty Name="LogID" ColumnName="LogID" />
+                <ScalarProperty Name="InodyID" ColumnName="InodyID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TraineesDailies">
+            <EntityTypeMapping TypeName="GymModel.TraineesDaily">
+              <MappingFragment StoreEntitySet="TraineesDaily">
+                <ScalarProperty Name="LogID" ColumnName="LogID" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="TraineeID" ColumnName="TraineeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Trainees">
+            <EntityTypeMapping TypeName="GymModel.Trainee">
+              <MappingFragment StoreEntitySet="Trainees">
+                <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+                <ScalarProperty Name="SocialID" ColumnName="SocialID" />
+                <ScalarProperty Name="Mail" ColumnName="Mail" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+                <ScalarProperty Name="JoiningDate" ColumnName="JoiningDate" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+                <ScalarProperty Name="NationalID" ColumnName="NationalID" />
+                <ScalarProperty Name="Degree" ColumnName="Degree" />
+                <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Birtdate" ColumnName="Birtdate" />
+                <ScalarProperty Name="TraineeName" ColumnName="TraineeName" />
+                <ScalarProperty Name="TraineeID" ColumnName="TraineeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TraineeProfiles">
+            <EntityTypeMapping TypeName="GymModel.TraineeProfile">
+              <MappingFragment StoreEntitySet="TraineeProfile">
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="TrainerID" ColumnName="TrainerID" />
+                <ScalarProperty Name="Transfered" ColumnName="Transfered" />
+                <ScalarProperty Name="Canceled" ColumnName="Canceled" />
+                <ScalarProperty Name="Frozen" ColumnName="Frozen" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="Others" ColumnName="Others" />
+                <ScalarProperty Name="Massage" ColumnName="Massage" />
+                <ScalarProperty Name="SPA" ColumnName="SPA" />
+                <ScalarProperty Name="Inbody" ColumnName="Inbody" />
+                <ScalarProperty Name="Invitations" ColumnName="Invitations" />
+                <ScalarProperty Name="Freezing" ColumnName="Freezing" />
+                <ScalarProperty Name="SessionsNum" ColumnName="SessionsNum" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="PaymentMethod" ColumnName="PaymentMethod" />
+                <ScalarProperty Name="Carry" ColumnName="Carry" />
+                <ScalarProperty Name="Paid" ColumnName="Paid" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="To" ColumnName="To" />
+                <ScalarProperty Name="From" ColumnName="From" />
+                <ScalarProperty Name="OfferID" ColumnName="OfferID" />
+                <ScalarProperty Name="TraineeID" ColumnName="TraineeID" />
+                <ScalarProperty Name="LogID" ColumnName="LogID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CashIns">
+            <EntityTypeMapping TypeName="GymModel.CashIn">
+              <MappingFragment StoreEntitySet="CashIn">
+                <ScalarProperty Name="CashID" ColumnName="CashID" />
+                <ScalarProperty Name="OfferName" ColumnName="OfferName" />
+                <ScalarProperty Name="userName" ColumnName="userName" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="TraineeName" ColumnName="TraineeName" />
+                <ScalarProperty Name="Desc" ColumnName="Desc" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="RecieptID" ColumnName="RecieptID" />
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GymDatas">
+            <EntityTypeMapping TypeName="GymModel.GymData">
+              <MappingFragment StoreEntitySet="GymData">
+                <ScalarProperty Name="Logo" ColumnName="Logo" />
+                <ScalarProperty Name="Mail" ColumnName="Mail" />
+                <ScalarProperty Name="Phone2" ColumnName="Phone2" />
+                <ScalarProperty Name="Phone1" ColumnName="Phone1" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
